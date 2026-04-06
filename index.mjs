@@ -1,8 +1,6 @@
 import express from 'express';
 
-import { createRequire } from 'module';
-const require = createRequire(import.meta.url);
-const catFacts = require('cat-facts');
+import dogFacts from 'dog-facts';
 
 const app = express();
 app.set("view engine", "ejs");
@@ -58,9 +56,9 @@ app.get('/searchGender', async (req, res) => {
 });
 
 
-app.get('/catFacts', (req, res) => {
-    let fact = catFacts.random();
-    res.render('catfacts.ejs', { fact });
+app.get('/dogfacts', (req, res) => {
+    const fact = dogFacts.random();
+    res.render('dogfacts.ejs', { fact });
 });
 
 const PORT = process.env.PORT || 3000;
