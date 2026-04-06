@@ -55,7 +55,7 @@ app.get('/searchGender', async (req, res) => {
 });
 
 
-app.get('/catfacts', (req, res) => {
+app.get('/catFacts', (req, res) => {
     let fact = catFacts.random();
     res.render('catfacts.ejs', { fact });
 });
