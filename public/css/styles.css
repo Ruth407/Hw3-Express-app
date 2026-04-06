@@ -1,0 +1,50 @@
+body{
+    text-align:center;
+    background-image: url("../img/graph.jpg");
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    
+    
+}
+#search{
+    text-align:center;
+    background-image: url("../img/graph.jpg");
+    background-size: contain;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    
+    
+}
+.header{
+    color:white;
+    font-family: Arial, sans-serif;
+     font-size: 44px;
+    font-weight: 800;
+    background-color:rgba(17, 17, 21, 1);
+    padding:20px;
+    margin:0;
+
+}
+
+#main {
+    background-color: rgba(252, 255, 251, 0.9);
+    font-size: 1.5rem;    
+    padding: 20px;
+    max-width: 600px; 
+    font-weight: bold;
+    margin: 60px auto;   
+    border-radius: 20px;
+    background-size: cover;
+    
+}
+
+footer {
+    margin-top: 40px;
+    color: white;
+    background: #000000;
+    text-align: center;
+    padding: 18px 10px 22px;
+}
