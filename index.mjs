@@ -60,6 +60,8 @@ app.get('/catfacts', (req, res) => {
     res.render('catfacts.ejs', { fact });
 });
 
+const PORT = process.env.PORT || 3000;
+
 app.listen(3000, () => {
    console.log('server started');
 });
