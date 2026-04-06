@@ -19,14 +19,20 @@
     <%- include('partials/navbar.ejs') %>
         <div id="main">
 
-            <h1>Random Dog Facts</h1>
-
-            <p>
-                <%= fact %>
+            <h1>Random Person Generator</h1>
+            <p>Name: <%= fact.name %>
+            </p>
+            <p>Age: <%= fact.age %>
+            </p>
+            <p>Profession: <%= fact.profession %>
+            </p>
+            <p>City: <%= fact.city %>
+            </p>
+            <p>Country: <%= fact.country %>
             </p>
 
-            <a href="/dogfacts">
-                <button>Get another fact</button>
+            <a href="/randomperson">
+                <button>Generate Person</button>
 
             </a>
         </div>

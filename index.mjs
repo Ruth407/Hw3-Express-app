@@ -1,6 +1,7 @@
 import express from 'express';
 
-import dogFacts from 'dog-facts';
+import Chance from 'chance';
+const chance = new Chance();
 
 const app = express();
 app.set("view engine", "ejs");
@@ -56,13 +57,19 @@ app.get('/searchGender', async (req, res) => {
 });
 
 
-app.get('/dogfacts', (req, res) => {
-    const fact = dogFacts.random();
-    res.render('dogfacts.ejs', { fact });
+app.get('/randomperson', (req, res) => {
+    const fact = {
+        name: chance.name(),
+        age: chance.age(),
+        profession: chance.profession(),
+        city: chance.city(),
+        country: chance.country({ full: true })
+    };
+    res.render('randomperson.ejs', { fact });
 });
 
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {
-   console.log('server started');
+    console.log(`Server is running on port ${PORT}`);
 });
