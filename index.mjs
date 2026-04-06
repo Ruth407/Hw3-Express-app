@@ -1,5 +1,8 @@
 import express from 'express';
-import catFacts from 'cat-facts';
+
+import { createRequire } from 'module';
+const require = createRequire(import.meta.url);
+const catFacts = require('cat-facts');
 
 const app = express();
 app.set("view engine", "ejs");
